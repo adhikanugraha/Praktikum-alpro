@@ -76,6 +76,41 @@ class Struk{
 			
 			cout<<"harga pesanan = "<<total<<endl;
 		}
+		void biaya_ongkir(){
+			if(jarak<=3){
+				ongkir = 15000;
+				if(total>=25000 && total<50000){
+					ongkir-=3000;
+				}
+				else if(total>=50000 && total<150000){
+					ongkir-=5000;
+					diskon=0.15;
+					
+				}
+				else if(total>=150000){
+					ongkir-=8000;
+					diskon=0.35;
+				}
+			}
+			else if(jarak>3){
+				ongkir=25000;
+				if(total>=25000 && total<50000){
+					ongkir-=3000;
+				}
+				else if(total>=50000 && total<150000){
+					ongkir-=5000;
+					diskon=0.15;
+					
+				}
+				else if(total>=150000){
+					ongkir-=8000;
+					diskon=0.35;
+				}
+			}
+		cout<<"ongkir = "<<ongkir<<endl;
+		cout<<"diskon = "<<diskon*100<<"%"<<endl;
+		cout<<"total = "<<total+ongkir-(total*diskon);
+		}
 	
 		
 	
