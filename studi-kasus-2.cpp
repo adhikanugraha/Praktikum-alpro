@@ -53,6 +53,29 @@ class Struk{
 			total=(ayam_ge*21000)+(ayam_gr*17000)+(udang*19000)+(cumi*20000)+(ayam_bk*25000);
 		}
 		
+		void struk_top(){
+			system("cls");
+			harga_makanan();
+			cout<<"=============================================\n";
+			cout<<"\t TOTAL BELANJA ANDA"<<endl; 
+			if(ayam_ge>0){
+				cout<<"Ayam Geprek x "<< ayam_ge <<" = "<<ayam_ge*21000<<endl;
+			}
+			if(ayam_gr>0){
+				cout<<"Ayam Goreng x "<< ayam_gr<<" = "<<ayam_gr*17000<<endl;
+			}
+			if(udang>0){
+				cout<<"Udang Goreng x "<< udang <<" = "<<udang*19000<<endl;
+			}
+			if(cumi>0){
+				cout<<"Cumi Goreng x "<< cumi <<" = "<<cumi*20000<<endl;
+			}
+			if(ayam_bk>0){
+				cout<<"Ayam Bakar x "<< ayam_bk <<" = "<<ayam_bk*25000<<endl;
+			}
+			
+			cout<<"harga pesanan = "<<total<<endl;
+		}
 	
 		
 	
@@ -73,6 +96,13 @@ class Struk{
 		int total;
 };
 
-
+int main(){
+	Struk x;
+	x.menu();
+	x.pilih_menu();
+	x.struk_top();
+	x.biaya_ongkir();
+	
+}
 
 
